@@ -29,15 +29,12 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Custom properties */
 :root {
     --primary-cyan-clr: hsl(179, 62%, 43%);
+    --primary-light-blue-clr: hsl(179, 47%, 52%);
     --primary-yellow-clr: hsl(71, 73%, 54%);
-
     --neutral-gray-clr: hsl(204, 43%, 93%);
     --neutral-blue-clr: hsl(218, 22%, 67%);
-
     --body-fs: 16px;
-
     --main-ff: 'Karla', sans-serif;
-
     --fw-regular: 400;
     --fw-bold: 700;
 }
@@ -47,4 +44,42 @@ body {
     background-color: var(--neutral-gray-clr);
     font-size: var(--body-fs);
     font-family: var(--main-ff);
+}
+
+.container {
+    margin: 2rem;
+    box-shadow: 0px 5px 20px -10px grey;
+}
+
+.header,
+.plan,
+.info {
+    padding: 0 1.5rem;
+}
+
+.header {
+    background-color: white;
+}
+
+.title {
+    font-size: 1.2rem;
+    color: var(--primary-cyan-clr);
+}
+
+.subTitle {
+    font-size: 1rem;
+    color: var(--primary-yellow-clr);
+}
+
+.description {
+    font-size: 0.85rem;
+    color: var(--neutral-blue-clr);
+}
+
+.plan {
+    background-color: var(--primary-cyan-clr);
+}
+
+.info {
+    background-color: var(--primary-light-blue-clr);
 }
