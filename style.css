@@ -42,8 +42,11 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Styles */
 body {
     background-color: var(--neutral-gray-clr);
-    font-size: var(--body-fs);
     font-family: var(--main-ff);
+}
+
+body * {
+  font-size: var(--body-fs);
 }
 
 .container {
@@ -54,32 +57,126 @@ body {
 .header,
 .plan,
 .info {
-    padding: 0 1.5rem;
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
 }
 
 .header {
     background-color: white;
+    border-radius: 5px 5px 0 0;
 }
 
 .title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--primary-cyan-clr);
 }
 
 .subTitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--primary-yellow-clr);
 }
 
 .description {
     font-size: 0.85rem;
     color: var(--neutral-blue-clr);
+    line-height: 2;
 }
 
 .plan {
     background-color: var(--primary-cyan-clr);
+    color: white;
+}
+
+.planType {
+  font-size: 1.1rem;
+  font-weight: var(--fw-regular);
+}
+
+.planPrice {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -0.5rem 0 0.5rem 0;
+}
+
+.planPrice span {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  margin-right: 1rem;
+}
+
+.planPrice p {
+  color: var(--neutral-gray-clr);
+}
+
+.plan a {
+  background-color: var(--primary-yellow-clr);
+  width: 100%;
+  padding: 0.7rem;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 5px 30px -10px grey;
+}
+
+.plan a:hover {
+  background-color: hsl(71, 62%, 35%);
 }
 
 .info {
     background-color: var(--primary-light-blue-clr);
+    border-radius: 0 0 5px 5px;
+    color: white;
+}
+
+.info p {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header,
+  .plan,
+  .info {
+    gap: 0.3rem;
+  }
+
+  .header .title {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 630px;
+  }
+
+  .header {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+
+  .plan {
+    grid-row: 2;
+    grid-column: 1;
+    border-bottom-left-radius: 5px;
+  }
+
+  .info {
+    grid-row: 2;
+    grid-column: 2;
+    border-radius: 0 0 5px 0;
+  }
+
+  .info .infoLinks {
+    font-size: 0.8rem;
+  }
 }
